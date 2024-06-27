@@ -34,7 +34,7 @@ const schema = mongoose.Schema(
       type: Number,
       required: true,
     },
-    categoryID: {
+    categoryID: { // برای کدوم دسته هس تش 
       type: mongoose.Types.ObjectId,
       ref: "Category",
       required: true,

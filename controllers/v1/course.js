@@ -5,6 +5,7 @@ const commentsModel = require("./../../models/comment");
 const courseUserModel = require("./../../models/course-user");
 const { default: mongoose } = require("mongoose");
 
+//ساخت دوره
 exports.create = async (req, res) => {
   const {
     name,
@@ -85,6 +86,7 @@ exports.getOne = async (req, res) => {
   });
 };
 
+// ایجاد جلسه 
 exports.createSession = async (req, res) => {
   const { title, free, time } = req.body;
   const { id } = req.params;
@@ -141,6 +143,7 @@ exports.getAll = async (req, res) => {
   return res.json(allCourses);
 };
 
+// دیدن کل جلسات
 exports.getAllSessions = async (req, res) => {
   const sessions = await sessionModel
     .find({})

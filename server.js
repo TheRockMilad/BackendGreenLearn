@@ -11,6 +11,9 @@ const port = process.env.PORT;
 })();
 
 app.get("/", (req, res) => {
+  // اینجوری میتونیم توکن رو بگیریم
+  // و با نصف کردنش با جای خالی و انتخاب ایندکس دوم
+  // فقط خود توکن رو دریافت کنیم 
   console.log("Token =>", req.header("Authorization").split(" ")[1]);
   res.json({ message: "Ok" });
 });

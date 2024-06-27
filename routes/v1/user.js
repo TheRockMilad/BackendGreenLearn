@@ -20,6 +20,10 @@ router
 
 router
   .route("/ban/:id")
+  //بررسی میکنه
+  // میدلور اول که آیا توکن داره 
+  // میدلور دوم آیا ادمین هستش
+  // بعد میره عملیات بن شدن
   .post(authMiddleware, isAdminMiddleware, userController.banUser);
 
 module.exports = router;

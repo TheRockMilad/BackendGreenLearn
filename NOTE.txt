@@ -1,0 +1,7 @@
+برای ارسال توکن از پست من از قسمت 
+authorization
+bearer Token 
+استفاده میکنیم
+
+token ADMIN:
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY2N2Q5OTkwMmE1YTg3MDIxNTAxZTA1OCIsImlhdCI6MTcxOTUxMDk3NSwiZXhwIjoxNzIyMTAyOTc1fQ.MvjFOUBvbJEm-ClTtFA3qjcY-qae-OFtSHrqRHJ5Vp8

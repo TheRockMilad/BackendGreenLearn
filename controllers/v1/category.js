@@ -1,7 +1,9 @@
 const { default: mongoose } = require("mongoose");
 const categoryModel = require("./../../models/category");
 
+// باید ولیدت اطلاعات رو انجام بدیم
 exports.create = async (req, res) => {
+  // باید اعتبار سنجی به این اضافه بشه
   const { title, href } = req.body;
   const category = await categoryModel.create({ title, href });
 
