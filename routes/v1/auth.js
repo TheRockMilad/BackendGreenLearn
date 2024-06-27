@@ -12,4 +12,6 @@ router.get("/me", contoller.getMe);
 // localhost:4000/api/v1/register
 // localhost:4000/api/v2/register
 
+//getMe 
+// اصلاعات صاحب اون توکن رو بگیریم
 module.exports = router;
