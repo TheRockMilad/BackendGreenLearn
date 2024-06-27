@@ -25,10 +25,12 @@ const schema = new mongoose.Schema(
     },
     role: {
       type: String,
+      // enum
       enum: ["ADMIN", "USER"],
       default: "USER",
     },
   },
+  // timestamp 
   { timestamps: true }
 );
 
