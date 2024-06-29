@@ -1,5 +1,7 @@
 const mongoose = require("mongoose");
 
+// مدل وقتی یکی از دانشجویان ثبت نام میکنه 
+// دوره مورد نظر و یوزر موردنظر و مبلغ رو میفرسته توی این مدل
 const schema = mongoose.Schema(
   {
     course: {

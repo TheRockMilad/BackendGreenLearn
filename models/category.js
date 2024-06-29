@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const schema = mongoose.Schema({
-  title: {
+  title: { // بک اند
     type: String,
     required: true,
   },
-  href: {
+  href: { // back-end => for url 
     type: String,
     required: true,
   },

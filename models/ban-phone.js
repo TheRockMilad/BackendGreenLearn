@@ -13,3 +13,5 @@ const schema = new mongoose.Schema(
 const model = mongoose.model("BanUser", schema);
 
 module.exports = model;
+
+// یک شماره میگیره فقط برای بن کردن کاربر با شماره اش
