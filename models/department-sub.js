@@ -2,11 +2,11 @@ const mongoose = require("mongoose");
 
 const schema = mongoose.Schema(
   {
-    title: {
+    title: { // اسم زیر مجموعه دپارتمان
       type: String,
       required: true,
     },
-    parent: {
+    parent: { // والد (دپارتمان اصلی)
       type: mongoose.Types.ObjectId,
       ref: "Department",
     },

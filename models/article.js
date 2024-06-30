@@ -23,7 +23,7 @@ const schema = mongoose.Schema(
       required: true,
     },
     href: {
-      // example : AI
+      // example : article_about_API_and_the_earth
       type: String,
       required: true,
     },

@@ -9,7 +9,9 @@ const router = express.Router();
 
 router
   .route("/")
+  // گرفتن تمام مقاله ها
   .get(articlesController.getAll)
+  // ساخت مقاله 
   .post(
     authMiddleware,
     isAdminMiddleware,
@@ -18,15 +20,17 @@ router
     ),
     articlesController.create
   );
-
+// گرفتن یک مقاله
 router.route("/:href").get(articlesController.getOne);
 
 router
-  .route("/:id")
+.route("/:id")
+// پاک کردن یک مقاله
   .delete(authMiddleware, isAdminMiddleware, articlesController.remove);
 
 router
   .route("/draft")
+  // پیش نمایش کردن مقاله
   .post(
     authMiddleware,
     isAdminMiddleware,

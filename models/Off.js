@@ -16,10 +16,13 @@ const schema = mongoose.Schema(
       required: true,
     },
     max: {
+      // بیشترین امکان استفاده
       type: Number, // => 2
       required: true,
     },
     uses: {
+      //  چند بار استفاده شده
+      
       type: Number, // => 0
       required: true,
     },

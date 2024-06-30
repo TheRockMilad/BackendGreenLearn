@@ -28,6 +28,7 @@ exports.create = async (req, res) => {
   return res.status(201).json(mainTicket);
 };
 
+// دیدن تمامی تیکت ها توسط مدیر
 exports.getAll = async (req, res) => {
   const tickets = await ticketsModel
     .find({ answer: 0 })
@@ -39,6 +40,7 @@ exports.getAll = async (req, res) => {
   return res.json(tickets);
 };
 
+// تیکت های کاربر 
 exports.userTickets = async (req, res) => {
   const tickets = await ticketsModel
     .find({ user: req.user._id })
@@ -51,11 +53,12 @@ exports.userTickets = async (req, res) => {
   return res.json(tickets);
 };
 
+// نشون دادن دپارتمان ها
 exports.departments = async (req, res) => {
   const departments = await departmentsModel.find();
   return res.json(departments);
 };
-
+//نشون دادن زیر دپارتمان ها
 exports.departmentsSubs = async (req, res) => {
   const departmentSubs = await departmentsSubModel
     .find({
@@ -66,6 +69,7 @@ exports.departmentsSubs = async (req, res) => {
   return res.json(departmentSubs);
 };
 
+// جواب دادن به تیکت 
 exports.setAnswer = async (req, res) => {
   const { body, ticketID } = req.body;
   console.log("1111", req.body);
@@ -93,7 +97,7 @@ exports.setAnswer = async (req, res) => {
 
   return res.status(201).json(answer);
 };
-
+// گرفتن جواب تیکت
 exports.getAnswer = async (req, res) => {
   const { id } = req.params;
   const ticket = await ticketsModel.findOne({ _id: id });
@@ -104,3 +108,5 @@ exports.getAnswer = async (req, res) => {
     ticketAnswer: ticketAnswer ? ticketAnswer : null,
   });
 };
+
+// پاک کردن و ادیت کردن خودمون بنویسیم 
